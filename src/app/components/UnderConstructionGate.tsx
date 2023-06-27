@@ -4,6 +4,8 @@ import { api } from '@/api/client';
 import { redirect } from 'next/navigation';
 import ComingSoonPage from './ComingSoon';
 
+export const revalidate = 0;
+
 export default async function UnderConstructionGate({children}: {children: React.ReactNode}) {
     
   // check for under construction
