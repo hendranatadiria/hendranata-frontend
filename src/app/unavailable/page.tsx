@@ -6,6 +6,9 @@ import { redirect } from "next/navigation";
 export const metadata: Metadata = {
     title: "Unavailable | Bernardinus Hendra N's Personal Site",
   };
+
+export const revalidate = 0;
+
 const UnavailablePage = async () => {
     let data:null| AxiosResponse = null;
     try {

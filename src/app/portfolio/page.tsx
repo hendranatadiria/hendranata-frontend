@@ -9,6 +9,8 @@ import { redirect } from 'next/navigation';
 export const metadata: Metadata = {
     title: "Portfolio | Bernardinus Hendra N's Personal Site",
   }
+
+  export const revalidate = 0;
   
 const PortfolioPage = async () => {
     try {

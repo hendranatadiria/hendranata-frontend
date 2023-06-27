@@ -1,6 +1,8 @@
 import Link from "next/link";
 import LandingCard from "./components/LandingCard";
 
+export const revalidate = 0;
+
 const Index = () => {
     return (
         <section>

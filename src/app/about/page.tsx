@@ -12,6 +12,8 @@ export const metadata: Metadata = {
     title: "About | Bernardinus Hendra N's Personal Site",
   }
 
+  export const revalidate = 0;
+
   const getPresentExpected = (edu:any) => {
     const currDate = DateTime.fromISO(edu.attributes?.ToDate)?.setLocale('en-US').toFormat('LLL yyyy')
         if(edu.attributes?.Expected === true) {
