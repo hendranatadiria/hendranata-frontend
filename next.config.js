@@ -7,6 +7,11 @@ const nextConfig = {
                 hostname: 'localhost',
                 port: "1337",
                 pathname: '/uploads/**',
+            },
+            {
+                protocol: 'https',
+                hostname: 'portfolio-cms.hendranata.com',
+                pathname: '/uploads/**',
             }
         ]
     }
