@@ -17,6 +17,6 @@ export default async function UnderConstructionGate({children}: {children: React
     }
 
   return (
-    <div>{data?.data?.data?.attributes?.status === true? <ComingSoonPage /> : children}</div>
+    <div>{(process.env.NEXT_PUBLIC_UNDER_CONSTRUCTION === "true" || data?.data?.data?.attributes?.status === true) ? <ComingSoonPage /> : children}</div>
   )
 }
