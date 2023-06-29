@@ -1,5 +1,6 @@
 import Link from "next/link";
 import LandingCard from "./components/LandingCard";
+import TypingText from "./components/TypingText";
 
 export const revalidate = 0;
 
@@ -8,7 +9,7 @@ const Index = () => {
         <section>
             <div className="pb-[10rem] flex-grow flex flex-col justify-center">
                 <h1 className="display-1">Bernardinus Hendra N,<br />
-                a <span className="hero-color">Full-Stack Software Engineer.</span>
+                <TypingText />
                 <br /><br />
                 Nice to meet you! 👋🏻</h1>
             </div>
