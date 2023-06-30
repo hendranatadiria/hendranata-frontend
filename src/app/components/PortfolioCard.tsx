@@ -1,6 +1,7 @@
 import { getStrapiUrl } from '@/api/client'
 import Image from 'next/image'
 import React from 'react'
+import { ReactMarkdown } from 'react-markdown/lib/react-markdown'
 
 export default function PortfolioCard({project}: {project: any}) {
   return (
@@ -17,7 +18,9 @@ export default function PortfolioCard({project}: {project: any}) {
             className='rounded-lg'
             style={{objectFit: 'cover'}} />
             </div>
-            <p className='text-justify'>{project.attributes.Description}</p>
+            <ReactMarkdown className='' components={{
+                    ul: ({node, ...props}) => <ul className='list-disc pl-5' {...props} />,
+                }}>{project.attributes.Description.replaceAll('\n', '\n\n')}</ReactMarkdown>
         </div>
         <div className='md:flex items-baseline'>
             <p className="font-bold flex-shrink-0">Related Stack:&nbsp;</p>

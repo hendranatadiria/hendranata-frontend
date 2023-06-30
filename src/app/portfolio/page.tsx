@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   
 const PortfolioPage = async () => {
     try {
-        const { data } = await api.get(api.defaults.baseURL + '/projects?sort[0]=Year&populate=Media,skills');
+        const { data } = await api.get(api.defaults.baseURL + '/projects?sort[0]=Year:desc&populate=Media,skills');
     return (
         <section>
             <PageTitle title='Portfolio 🧑🏻‍🏭' subtitle="A glimpse of what I've been up to." />
