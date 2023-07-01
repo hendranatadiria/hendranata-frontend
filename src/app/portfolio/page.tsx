@@ -19,7 +19,7 @@ const PortfolioPage = async () => {
         <section>
             <PageTitle title='Portfolio 🧑🏻‍🏭' subtitle="A glimpse of what I've been up to." />
             <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10'>
-                {data.data.map((project: any) => <PortfolioCard project={project} key={project.id} />)}
+                {data.data.map((project: any) => <PortfolioCard project={project} key={project.id} thumbUrl={getStrapiUrl(project.attributes.Media.data[0].attributes?.url)} />)}
                 </div>
         </section>
     );
