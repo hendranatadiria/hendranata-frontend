@@ -67,41 +67,24 @@ body {
     @apply text-[16px] leading-[20px] text-justify pb-2;
   }
 
-}
+  .readMore {
+    @apply italic text-[0.8rem]
+  }
 
+  .hideText {
+    @apply overflow-hidden max-h-0 transition-all duration-500 ease-in-out;
+  }
+
+  .hideText.show {
+    @apply max-h-[1000px] transition-all duration-500 ease-in-out;
+  }
+
+}
 .fadeIn {
-  -webkit-animation: fadeIn 0.5s; /* Safari, Chrome and Opera > 12.1 */
-     -moz-animation: fadeIn 0.5s; /* Firefox < 16 */
-      -ms-animation: fadeIn 0.5s; /* Internet Explorer */
-       -o-animation: fadeIn 0.5s; /* Opera < 12.1 */
           animation: fadeIn 0.5s;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px) }
-  to   { opacity: 1; transform: translateY(0px) }
-}
-
-/* Firefox < 16 */
-@-moz-keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px) }
-  to   { opacity: 1; transform: translateY(0px) }
-}
-
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px) }
-  to   { opacity: 1; transform: translateY(0px) }
-}
-
-/* Internet Explorer */
-@-ms-keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px) }
-  to   { opacity: 1; transform: translateY(0px) }
-}
-
-/* Opera < 12.1 */
-@-o-keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px) }
   to   { opacity: 1; transform: translateY(0px) }
 }
