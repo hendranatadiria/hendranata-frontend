@@ -63,8 +63,8 @@ body {
     @apply rounded-full px-3 py-2 border-gray-300 border-[1px] mr-2 md:mx-1 my-1 text-sm;
   }
 
-  .r-markdown p {
-    @apply text-[16px] leading-[20px] text-justify pb-2;
+  .r-markdown p, .r-markdown {
+    @apply text-[16px] leading-[20px] text-justify pb-2 text-gray-600;
   }
 
   .readMore {
