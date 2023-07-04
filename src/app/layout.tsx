@@ -7,6 +7,8 @@ import UnderConstructionGate from './components/UnderConstructionGate'
 import { AxiosResponse } from 'axios'
 import { api } from '@/api/client'
 import { redirect } from 'next/navigation'
+import { Suspense } from 'react'
+import Analytics from './components/Analytics'
 
 const inter = Plus_Jakarta_Sans({ subsets: ['latin'] })
 
@@ -23,6 +25,9 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <Suspense>
+          <Analytics />
+        </Suspense>
         <UnderConstructionGate>
         <Appbar />
         <main className='flex min-h-[calc(100vh-48px-48px-14px)] flex-col justify-between p-10 md:p-24'>
